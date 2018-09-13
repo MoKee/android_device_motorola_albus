@@ -73,7 +73,7 @@ persist.bt.enableAptXHD=true
 
 # Camera
 persist.camera.HAL3.enabled=1
-vendor.camera.aux.packagelist="org.codeaurora.snapcam,com.motorola.camera2,com.motorola.motocit,org.lineageos.snap"
+vendor.camera.aux.packagelist="org.codeaurora.snapcam,com.motorola.camera2,com.motorola.motocit,org.mokee.snap"
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 persist.camera.camera2=true
 persist.camera.expose.aux=1

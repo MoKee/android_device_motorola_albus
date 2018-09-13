@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-mokee
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -141,9 +141,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/mot_ov5695_ofilm_chromatix.xml:system/etc/camera/mot_ov5695_ofilm_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/com.motorola.camera/always_aware_ocr.json:system/etc/motorola/com.motorola.camera/always_aware_ocr.json
 
-# LineageActions
+# MoKeeActions
 PRODUCT_PACKAGES += \
-    LineageActions
+    MoKeeActions
 
 # Display
 PRODUCT_PACKAGES += \
@@ -253,7 +253,7 @@ PRODUCT_PACKAGES += \
 
 # Display Calibration
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm
+    vendor.mokee.livedisplay@1.0-service-sdm
 
 # DRM
 PRODUCT_PACKAGES += \

@@ -1,4 +1,3 @@
-#!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2017 The LineageOS Project
@@ -14,39 +13,28 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-set -e
 
-DEVICE=albus
-VENDOR=motorola
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/motorola/albus/full_albus.mk)
 
-INITIAL_COPYRIGHT_YEAR=2017
+# Inherit some common MK stuff.
+$(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
-# Load extract_utils and do some sanity checks
-MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+# Boot animation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
 
-MK_ROOT="$MY_DIR"/../../..
+## Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := albus
+PRODUCT_NAME := mk_albus
+PRODUCT_BRAND := motorola
+PRODUCT_MANUFACTURER := motorola
 
-HELPER="$MK_ROOT"/vendor/mk/build/tools/extract_utils.sh
-if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
-    exit 1
-fi
-. "$HELPER"
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
 
-# Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$MK_ROOT"
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
-# Copyright headers and guards
-write_headers
-
-write_makefiles "$MY_DIR"/proprietary-files.txt true
-
-cat << EOF >> "$ANDROIDMK"
-
-EOF
-
-# Finish
-write_footers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME="Moto Z2 Play"
