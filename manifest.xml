@@ -296,7 +296,7 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.lineage.livedisplay</name>
+        <name>vendor.mokee.livedisplay</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
         <interface>
@@ -557,7 +557,7 @@
         <fqname>@1.0::IEQServiceHIDL/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.lineage.touch</name>
+        <name>vendor.mokee.touch</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>

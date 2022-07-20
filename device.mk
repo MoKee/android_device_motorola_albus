@@ -208,11 +208,11 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sysfs
+    vendor.mokee.livedisplay@2.0-service-sysfs
 
-# Lineage hardware
+# MoKee hardware
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.albus
+    vendor.mokee.touch@1.0-service.albus
 
 # Media
 PRODUCT_COPY_FILES += \

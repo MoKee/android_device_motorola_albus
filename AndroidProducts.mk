@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_albus.mk
+    $(LOCAL_DIR)/mokee_albus.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_albus-user \
-    lineage_albus-userdebug \
-    lineage_albus-eng
+    mokee_albus-user \
+    mokee_albus-userdebug \
+    mokee_albus-eng

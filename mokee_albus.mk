@@ -21,7 +21,7 @@ $(call inherit-product, device/motorola/albus/full_albus.mk)
 # Inherit from core products - Most specific first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/mokee/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_SCREEN_WIDTH := 1080
@@ -33,7 +33,7 @@ PRODUCT_DEVICE := albus
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_MODEL := Moto Z2 Play
-PRODUCT_NAME := lineage_albus
+PRODUCT_NAME := mokee_albus
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
